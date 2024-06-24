@@ -3,9 +3,9 @@ import { setCredentials } from "../../features/auth/authSlice";
 
 const baseQuery = fetchBaseQuery({
   baseUrl:
-    process.env.REACT_APP_NODE_ENV === "development"
+    process.env.NODE_ENV === "development"
       ? "http://localhost:3500"
-      : "https://technotes-api-atl7.onrender.com",
+      : "https://backend-technotes-dave-v1.onrender.com",
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
